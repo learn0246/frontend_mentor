@@ -1,0 +1,216 @@
+/* || Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing : border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* || Variables */
+
+:root {
+  /* Fonts */
+  --FF: Arial, sans-serif;
+  --FS-S: clamp(0.8rem, 0.8vw, 1rem);
+  --FS-M: clamp(1rem, 1vw, 1.2rem);
+  --FS-L: clamp(1.2rem, 1.2vw, 1.5rem);
+
+  /* Colors */
+
+
+  /* Shadows */
+  --BS-LIGHT: 0 0 1rem rgba(0, 0, 0, 0.2);
+  --BS-MIDIUMN: 0 0 1rem rgba(0, 0, 0, 0.4);
+  --BS-DARK: 0 0 1rem rgba(0, 0, 0, 0.6);
+}
+
+/* || General */
+
+html {
+  font-family: var(--FF);
+  font-size: var(--FS-M);
+}
+
+body {
+
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+/* || Header */
+
+.header {
+  position: sticky;
+  z-index: 10;
+}
+
+.top-nav {
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
+
+.top-nav__start {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.top-nav a {
+  text-decoration: none;
+  font-size: var(--FS-S);
+}
+
+.top-nav__end {
+  padding-right: 1rem;
+}
+
+.top-nav__ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  height: 100%;
+}
+
+.top-nav__li{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 0.8rem;
+  transition: background-color 0.2s;
+}
+
+.top-nav__li:hover{
+  background-color: rgb(211, 211, 211);
+}
+
+.top-nav__li a {
+  text-decoration: none;
+}
+
+/* || Main */
+
+main {
+  padding: 2rem;
+}
+
+.main__section {
+  
+}
+
+.main__section-header {
+  font-size: var(--FS-L);
+}
+
+/* || Protofolio */
+
+.protfolio-container {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, clamp(200px, 30vw, 300px));
+  gap: 1rem;
+}
+
+.protfolio__card {
+  border-radius: 0.6rem;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  justify-content: center;
+  align-content: center;
+  gap: 0; /*reset gap because subgrid  inherits gap from parent grid */
+  box-shadow: var(--BS-LIGHT);
+}
+
+
+.protfolio__img-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.protfolio__img-container::after {
+  content: "";
+  background-image: linear-gradient(to right, red, yellow);
+  height: 4px;
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.protfolio__img {
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+}
+
+.protfolio__header {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.protfolio__describtion {
+  text-align: center;
+  margin: 0.5rem;
+  font-size: var(--FS-S);
+  color: rgb(175, 175, 175);
+}
+
+.protfolio__button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.protfolio__button {
+  border: none;
+  background-color: white;
+  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  width: 90%;
+  position: relative;
+}
+
+.protfolio__button::after {
+  content: '';
+  background-color: black;
+  height: 2px;
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  left: 20%;
+  transition: width 0.2s;
+}
+
+.protfolio__button:hover::after {
+  width: 60%;
+}
+
+
+.protfolio__button:active {
+  transition: transfrom 0.2s;
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+
+.protfolio__button-link {
+  font-size: var(--FS-S);
+}
