@@ -119,23 +119,21 @@ main {
   color: rgb(175, 175, 175);
 }
 
-.card__button-container {
-  display: flex;
-  justify-content: center;
-}
 
-.card__button {
+
+.card__link {
   border: none;
   background-color: white;
   border-radius: 0.2rem;
   margin-bottom: 0.5rem;
   height: 1.5rem;
   cursor: pointer;
-  width: 90%;
+  width: 100%;
   position: relative;
+  text-align: center;
 }
 
-.card__button::after {
+.card__link::after {
   content: '';
   background-color: black;
   height: 2px;
@@ -146,17 +144,6 @@ main {
   transition: width 0.2s;
 }
 
-.card__button:hover::after {
+.card__link:hover::after {
   width: 60%;
-}
-
-
-.card__button:active {
-  transition: transfrom 0.2s;
-  transform: scale(0.98);
-  opacity: 0.8;
-}
-
-.card__button-link {
-  font-size: var(--FS-S);
 }
