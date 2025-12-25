@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 /* || Variables */
 
 :root {
@@ -36,6 +41,7 @@ html {
 body {
   background-color: var(--Yellow);
   min-height: 100vh;
+  min-width: 375px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -50,7 +56,8 @@ p {
 
 /* || Card */
 .card {
-  width: 384px;
+  max-width: 384px;
+  min-width: 320px;
   height: 522px;
   display: flex;
   flex-direction: column;
