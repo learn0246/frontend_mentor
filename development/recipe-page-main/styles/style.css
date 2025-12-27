@@ -35,8 +35,8 @@ img {
   --FS: clamp(0.75rem, 1.66vw, 1rem);
   --FS-P: 16px;
   --FS-H1: clamp(2rem, 5vw, 3rem);
-  --FS-H2: clamp(1.5rem, 3.32vw, 3rem);
-  --FS-H3: clamp(1.125rem, 2.5vw, 3rem);
+  --FS-H2: clamp(1.5rem, 3.32vw, 2rem);
+  --FS-H3: clamp(1.125rem, 2.5vw, 1.5rem);
 
   /* padding */
   --Padding: clamp(0.75rem, 5vw, 3rem);
