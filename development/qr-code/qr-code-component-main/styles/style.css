@@ -25,6 +25,7 @@ img {
 
   /* fonts */
   --FS-PARAGRAPH: 15px; 
+  --FS-H2: 18px;
   --FF: "Outfit", sans-serif;
   --FW-NORMAL: 400;
   --FW-BOLD: 700;
@@ -76,6 +77,7 @@ p {
 .card__header {
   margin: 0.5em 0;
   font-weight: var(--FW-BOLD);
+  font-size: var(--FS-H2);
   text-align: center;
   color: var(--SLATE900);
 }
