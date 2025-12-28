@@ -19,7 +19,7 @@ img {
 :root {
   /* colors */
   --Green-500: hsl(158, 36%, 37%);
-  --Green-700: hsl(158, 36%, 37%);
+  --Green-700: hsl(158, 42%, 18%);
   --Black: hsl(212, 21%, 14%);
   --Grey: hsl(228, 12%, 48%);
   --Cream: hsl(30, 38%, 92%);
@@ -159,7 +159,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--Green-700);
+  background-color: var(--Green-500);
   border: none;
   border-radius: 8px;
   gap: 8px;
@@ -173,6 +173,10 @@ p {
 .button__icon {
   width: 18px;
   height: 18px;
+}
+
+.button:hover {
+  background-color: var(--Green-700);
 }
 
 /* || Media query */
