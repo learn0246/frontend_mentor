@@ -54,7 +54,7 @@ input, button {
   --FS-step-0: 13px;
   --FS-step-3: 20px;
   --FS-step-4: 24px;
-  --FF-base: "Specimen", sans-serif;
+  --FF-base: "Barlow Semi Condensed", sans-serif;
 
   /* spacing */
   --space-40: 40px;
@@ -233,7 +233,7 @@ h2 {
     --grid-placement: 12;
     grid-template-rows: repeat(auto-fit, 1fr);
     --gutter: var(--space-32);
-    margin: 200px auto;
+    margin: auto;
   }
 
   .card:nth-of-type(1) {
