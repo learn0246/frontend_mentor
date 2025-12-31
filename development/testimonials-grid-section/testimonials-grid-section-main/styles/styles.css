@@ -78,7 +78,7 @@ body {
   font-family: var(--FF-base);
   font-size: var(--FS-step-0);
   letter-spacing: 0;
-  margin: auto; 
+  margin: 6rem 0; 
   text-wrap: wrap;
   hyphens: auto;
 }
@@ -197,10 +197,13 @@ h2 {
 
 /* || Media queries */
 @media only screen and (min-width: 785px) {
+  .wrapper {
+    margin: 40px;
+  }
+  
   .grid-main {
     --grid-placement: 8;
     --gutter: var(--space-32);
-    margin: 40px;
   }
 
   .card:nth-of-type(1) {
@@ -229,11 +232,14 @@ h2 {
 }
 
 @media only screen and (min-width: 1100px) {
+  .wrapper {
+    margin: 0 165px;
+  }
+  
   .grid-main {
     --grid-placement: 12;
     grid-template-rows: repeat(auto-fit, 1fr);
     --gutter: var(--space-32);
-    margin: auto;
   }
 
   .card:nth-of-type(1) {
