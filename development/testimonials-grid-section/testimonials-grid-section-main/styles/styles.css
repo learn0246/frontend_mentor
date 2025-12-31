@@ -54,6 +54,8 @@ input, button {
   --FS-step-0: 13px;
   --FS-step-3: 20px;
   --FS-step-4: 24px;
+  --FW-semi-bold: 600;
+  --FW-mediumn: 500;
   --FF-base: "Barlow Semi Condensed", sans-serif;
 
   /* spacing */
@@ -77,6 +79,7 @@ body {
   line-height: 1.4;
   font-family: var(--FF-base);
   font-size: var(--FS-step-0);
+  font-weight: var(--FW-mediumn);
   letter-spacing: 0;
   text-wrap: wrap;
   hyphens: auto;
@@ -95,6 +98,7 @@ h1 {
 
 h2 {
   font-size: var(--FS-step-3);
+  font-weight: var(--FW-semi-bold);
 }
 
 
