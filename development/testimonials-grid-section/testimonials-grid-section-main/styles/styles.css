@@ -202,7 +202,7 @@ h2 {
 }
 
 /* || Media queries */
-@media only screen and (min-width: 785px) {
+@media only screen and (min-width: 768px) {
   .wrapper {
     margin: 40px;
   }
