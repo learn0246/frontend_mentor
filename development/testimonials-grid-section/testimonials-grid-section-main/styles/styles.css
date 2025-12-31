@@ -21,7 +21,7 @@ html:focus-within {
 }
 
 body {
-  min-height: fit-content;
+  min-height: 100vh;
 }
 
 img, picture {
@@ -78,9 +78,11 @@ body {
   font-family: var(--FF-base);
   font-size: var(--FS-step-0);
   letter-spacing: 0;
-  margin: 6rem 0; 
   text-wrap: wrap;
   hyphens: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1, h2, h3{
@@ -101,7 +103,7 @@ h2 {
 
 /* wrapper */
 .wrapper {
-  margin: 0 var(--space-16);
+  margin: 5rem var(--space-16);
 }
 
 /* colors */
@@ -128,7 +130,7 @@ h2 {
       var(--grid-max-item-size, 1fr)
     )
   );
-  gap: var(--gutter, var(--space-16));
+  gap: var(--gutter, var(--space-32));
 }
 
 .grid-main {
@@ -142,7 +144,7 @@ h2 {
   justify-self: center;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-16);
 }
 
 .card {
@@ -231,9 +233,9 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1200px) {
   .wrapper {
-    margin: 0 165px;
+    margin: auto 165px;
   }
   
   .grid-main {
