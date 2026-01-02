@@ -93,7 +93,6 @@ body {
   font-size: var(--step-0);
   font-weight: var(--FW-mediumn);
   line-height: 1.5;
-  text-wrap: balance;
   display: flex;
   flex-direction: column;
 }
@@ -118,7 +117,8 @@ h3 {
 
 p {
   line-height: 1.5;
-  color: var(--slate-600)
+  color: var(--slate-600);
+  text-wrap: balance;
 }
 
 /* || Layout */
