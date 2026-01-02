@@ -315,6 +315,12 @@ button {
   padding: 16px 40px;
   max-width: 250px;
   font-weight: var(--FW-bold);
+  transition: all 0.25s;
+}
+
+button:hover {
+  opacity: 0.75;
+  filter: saturate(1.5);
 }
 
 /* || Media queries */
