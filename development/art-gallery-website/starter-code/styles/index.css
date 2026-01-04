@@ -46,6 +46,31 @@
   height: auto;
 }
 
+.location-button:focus-visible {
+  outline: 4px solid var(--gold-500); 
+  outline-offset: 2px;
+}
+
+.location-button:hover {
+  background-color: var(--gold-500);
+  transition: background-color 0.4s;
+}
+
+.location-button__text:hover {
+  background-color: var(--gold-500);
+  transition: background-color 0.4s;
+}
+
+.location-button__text:hover~.location-button__icon-wrapper {
+  background-color: var(--grey-900);
+  transition: background-color 0.4s;
+}
+
+.location-button__icon-wrapper:hover {
+  background-color: var(--grey-900);
+  transition: background-color 0.4s;
+}
+
 /* || Gallery */
 .gallery {
   display: flex;
@@ -91,6 +116,12 @@
 .footer__icon {
   width: 20px;
   height: 20px;
+}
+
+
+.footer__icon:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
 }
 
 /* || Logo */

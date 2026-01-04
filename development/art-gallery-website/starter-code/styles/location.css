@@ -19,11 +19,11 @@ body {
   height: 72px;
   display: flex;
   z-index: 10;
+  background-color: var(--grey-900);
 }
 
 .location-button__text {
   text-transform: uppercase;
-  background-color: var(--grey-900);
   font: var(--FW-light) 20px / 1 "Big shoulders", sans-serif;
   letter-spacing: 3.64px;
   color: var(--white);
@@ -44,7 +44,34 @@ body {
 .location-button__icon {
   width: 8px;
   height: auto;
+} 
+
+.location-button:focus-visible {
+  outline: 4px solid var(--gold-500); 
+  outline-offset: 2px;
 }
+
+.location-button:hover {
+  background-color: var(--gold-500);
+  transition: background-color 0.4s;
+}
+
+.location-button__text:hover {
+  background-color: var(--gold-500);
+  transition: background-color 0.4s;
+}
+
+.location-button__text:hover~.location-button__icon-wrapper {
+  background-color: var(--grey-900);
+  transition: background-color 0.4s;
+}
+
+.location-button__icon-wrapper:hover {
+  background-color: var(--grey-900);
+  transition: background-color 0.4s;
+}
+
+/* || Location */
 
 .location {
   background-color: var(--grey-900);
@@ -89,7 +116,17 @@ body {
   width: 20px;
   height: 20px;
   color: var(--grey-900);
-  filter: invert(100%) 
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+.footer__icon:hover {
+  filter: none;
+}
+
+.footer__icon:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
 }
 
 /* || Logo */
