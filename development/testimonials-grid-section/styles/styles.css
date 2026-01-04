@@ -1,0 +1,279 @@
+/* || Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* remove text-adjust */
+/* because we set all font sizes for any possible situation*/
+html {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+/* if html or any its descendents are focused */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img, picture {
+  width: 100%;
+  display: block;
+}
+
+input, button {
+  font: inherit;
+}
+
+/* || Variables */
+
+:root {
+  /* colors */
+  --purple-50: hsl(260, 100%, 95%);
+  --purple-300: hsl(264, 82%, 80%);
+  --purple-500: hsl(263, 55%, 52%);
+  --white: hsl(0, 0%, 100%);
+  --grey-100: hsl(214, 17%, 92%);
+  --grey-200: hsl(0, 0%, 81%);
+  --grey-400: hsl(224, 10%, 45%);
+  --grey-500: hsl(217, 19%, 35%);
+  --dark-blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+  --main-bg: #f3f3f3;
+
+  /* fonts */
+  --FS-step--1: 11px;
+  --FS-step-0: 13px;
+  --FS-step-3: 20px;
+  --FS-step-4: 24px;
+  --FW-semi-bold: 600;
+  --FW-mediumn: 500;
+  --FF-base: "Barlow Semi Condensed", sans-serif;
+
+  /* spacing */
+  --space-40: 40px;
+  --space-32: 32px;
+  --space-24: 24px;
+  --space-16: 16px;
+  
+  /* border-radius */
+  --border-radius: 8px;
+
+  /* box shadow */
+  --box-shadow: 40px 60px 60px #48556A66;
+}
+
+/* || Generals */
+
+body {
+  color: var(--black);
+  background-color: var(--main-bg);
+  line-height: 1.4;
+  font-family: var(--FF-base);
+  font-size: var(--FS-step-0);
+  font-weight: var(--FW-mediumn);
+  letter-spacing: 0;
+  text-wrap: wrap;
+  hyphens: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2, h3{
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--FS-step-4);
+}
+
+h2 {
+  font-size: var(--FS-step-3);
+  font-weight: var(--FW-semi-bold);
+}
+
+
+
+/* || Utilities */
+
+/* wrapper */
+.wrapper {
+  margin: 5rem var(--space-16);
+}
+
+/* colors */
+
+.color-purple-50 {
+  color: var(--purple-50);
+}
+
+.color-grey-200 {
+  color: var(--grey-200);
+}
+
+.color-grey-400 {
+  color: var(--grey-400);
+}
+
+/* || Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--grid-placement, auto-fill), 
+    minmax(
+      var(--grid-min-item-size, 1rem), 
+      var(--grid-max-item-size, 1fr)
+    )
+  );
+  gap: var(--gutter, var(--space-32));
+}
+
+.grid-main {
+  --grid-placement: 4;
+}
+
+
+/* || Card */
+
+.card-flex {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.card {
+  grid-column: span 4;
+  background-color: var(--white);
+  color: var(--white);
+  padding: var(--space-32);
+  border-radius: var(--border-radius);
+  width: 305px;
+  box-shadow: var(--box-shadow);
+}
+
+.card:nth-child(1) {
+  background-color: var(--purple-500);
+}
+
+.card:nth-child(2) {
+  background-color: var(--grey-500);
+}
+
+.card:nth-child(3) {
+  color: var(--grey-400);
+}
+
+.card:nth-child(4) {
+  color: var(--grey-200);
+  background-color: var(--black);
+}
+
+.card:nth-child(5) {
+  color: var(--grey-400);
+}
+
+/* card profile */
+.card__profile {
+  display: flex;
+  gap: var(--space-16);
+}
+
+.card__profile-info {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+/* card avator */
+.card__avatar {
+  align-self: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+}
+
+/* || Media queries */
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    margin: 40px;
+  }
+  
+  .grid-main {
+    --grid-placement: 8;
+    --gutter: var(--space-32);
+  }
+
+  .card:nth-of-type(1) {
+    grid-column: span 8;
+    width: 100%;
+  }
+
+  .card:nth-of-type(2) {
+    grid-column: span 4;
+    width: 100%;
+  }
+
+  .card:nth-of-type(3) {
+    grid-column: span 4;
+    width: 100%;
+  }
+  .card:nth-of-type(4) {
+    grid-column: span 8;
+    width: 100%;
+  }
+
+  .card:nth-of-type(5) {
+    grid-column: span 8;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    margin: auto 165px;
+  }
+  
+  .grid-main {
+    --grid-placement: 12;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    --gutter: var(--space-32);
+  }
+
+  .card:nth-of-type(1) {
+    grid-column: span 6;
+    width: 100%;
+  }
+
+  .card:nth-of-type(2) {
+    grid-column: span 3;
+    width: 100%;
+  }
+
+  .card:nth-of-type(3) {
+    grid-column: 1 / span 3;
+    grid-row: 2 / 3;
+    width: 100%;
+  }
+
+  .card:nth-of-type(4) {
+    grid-column: 4 / span 6;
+    grid-row: 2 / 3;
+    width: 100%;
+  }
+
+  .card:nth-of-type(5) {
+    grid-column: span 3;
+    grid-row: 1 / 3;
+    width: 100%;
+  }
+}

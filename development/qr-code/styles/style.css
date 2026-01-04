@@ -1,0 +1,90 @@
+/* || Reset */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} 
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* || Variables */
+
+:root {
+  /* colors */
+  --WHITE: hsl(0, 0%, 100%);
+  --SLATE300: hsl(212, 45% ,89%);
+  --SLATE500: hsl(215, 15% ,48%);
+  --SLATE900: hsl(218, 44% ,22%);
+
+  /* fonts */
+  --FS-PARAGRAPH: 15px; 
+  --FS-H2: 18px;
+  --FF: "Outfit", sans-serif;
+  --FW-NORMAL: 400;
+  --FW-BOLD: 700;
+}
+
+/* || General styles */
+
+html {
+  font-family: var(--FF);
+  font-weight: var(--FW-NORMAL);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--SLATE300);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* || Components */
+
+.card {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  place-content: center center;
+  margin: auto;
+  padding: 1rem;
+  background-color: var(--WHITE);
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card__img {
+  border-radius: 0.7rem;
+}
+
+.card__content {
+  margin: 0.8rem;
+}
+
+.card__header {
+  margin: 0.5em 0;
+  font-weight: var(--FW-BOLD);
+  font-size: var(--FS-H2);
+  text-align: center;
+  color: var(--SLATE900);
+}
+
+.card__note {
+  margin: 0.5em 0;
+  font-weight: var(--FW-NORMAL);
+  text-align: center;
+  color: var(--SLATE500);
+}
