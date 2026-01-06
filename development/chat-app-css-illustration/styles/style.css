@@ -455,9 +455,9 @@ main {
 
   .product-text {
     animation: 
+      hiding 1s ease-in, 
       slide-right 1s ease-in 1s,
       appear 1s ease-in 1s;
-    animation-fill-mode: forwards;
   }
 
   .phone {
@@ -465,7 +465,6 @@ main {
       hiding 0.6s ease-in, 
       slide-right 1s ease-in 0.6s,
       appear 1s ease-in 0.6s;
-    animation-fill-mode: forwards;
   }
 }
 
