@@ -1,51 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
-  Samuel Green
-  Available to Walk
+    <link rel="stylesheet" href="styles/style.css" />
 
-  That sounds great. I’d be happy with that.
+    <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  Could you send over some pictures of your dog, please?
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="product">
+        <span class="product-bg"></span>
+        <div class="phone">
+          <div class="phone__screen text-set-5">
+            <div class="phone__nav-bar">
+              <div class="phone__nav-bar-left">
+                <div class="phone__icon-wrapper">
+                  <div class="icon-left-arrow">
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+                <div class="phone__user-img-wrapper">
+                  <img
+                    src="images/avatar.jpg"
+                    alt="user-image"
+                    class="phone__user-img"
+                  />
+                </div>
+                <div class="phone__user-info">
+                  <p class="text-set-4 --color-white">Samuel Green</p>
+                  <p class="text-set-5">Available to Walk</p>
+                </div>
+              </div>
+              <div class="phone__nav-bar-right">
+                <div class="phone__icon-wrapper">
+                  <span class="icon-options">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="phone__messages">
+              <p
+                class="phone__message--text phone__message--sender phone__message-theme--purple-1"
+              >
+                That sounds great. I’d be happy with that.
+              </p>
+              <p
+                class="phone__message--text phone__message--sender phone__message-theme--purple-1"
+              >
+                Could you send over some pictures of your dog, please?
+              </p>
+              <div
+                class="phone__message-wrapper phone__message--receiver phone__message-margin-top"
+              >
+                <img
+                  src="images/dog-image-1.jpg"
+                  alt="dog"
+                  class="phone__message--img"
+                />
+                <img
+                  src="images/dog-image-2.jpg"
+                  alt="dog"
+                  class="phone__message--img"
+                />
+                <img
+                  src="images/dog-image-3.jpg"
+                  alt="dog"
+                  class="phone__message--img"
+                />
+              </div>
+              <p
+                class="phone__message--text phone__message--receiver phone__message-theme--normal"
+              >
+                Here are a few pictures. She’s a happy girl! Can you make it?
+              </p>
+              <p
+                class="phone__message--text phone__message--receiver phone__message-theme--normal"
+              >
+                Can you make it?
+              </p>
+              <p
+                class="phone__message--text phone__message--sender phone__message-theme--purple-1 phone__message-margin-top"
+              >
+                She looks so happy! The time we discussed works. How long shall
+                I take her out for?
+              </p>
+              <p
+                class="phone__message--option phone__message--sender phone__message-theme--purple-2"
+              >
+                <span class="icon-circle">30 minute walk</span>
+                <span class="text-set-4">$29</span>
+              </p>
+              <p
+                class="phone__message--option phone__message--sender phone__message-theme--purple-2"
+              >
+                <span class="icon-circle">1 hour walk</span>
+                <span class="text-set-4">$49</span>
+              </p>
+            </div>
+            <div class="phone__type-area">
+              <input type="text" id="type-area" placeholder="Type a message…" />
+              <div class="icon-send">
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-text">
+          <h1 class="text-set-1">Simple booking</h1>
+          <p class="text-set-2 --color-gray-500">
+            Stay in touch with our dog walkers through the chat interface. This
+            makes it easy to discuss arrangements and make bookings. Once the
+            walk has been completed you can rate your walker and book again all
+            through the chat.
+          </p>
+        </div>
+      </article>
+    </main>
 
-  Here are a few pictures. She’s a happy girl!
-
-  Can you make it?
-
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>
