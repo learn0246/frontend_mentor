@@ -17,7 +17,7 @@ function toggleDropdownMenu() {
 
 function toggleOverlay() {
   const overlayState = overlay.style.display;
-  overlay.style.display = overlayState == "none" ? "block" : "none";
+  overlay.style.display = overlayState === "none" ? "block" : "none";
 }
 
 toggleButton.onclick = toggleDropdownMenu;

@@ -1,220 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FrontendMentorChallenges</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Linking SwiperJS CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
-    <header class="header">
-      <nav class="top-nav">
-        <div class="top-nav__start"><a href="index.html">home</a></div>
-        <div class="top-nav__end">
-          <ul class="top-nav__ul">
-            <li class="top-nav__li"><a href="HTML&CSS.html">HTML & CSS</a></li>
-            <li class="top-nav__li">
-              <a href="javascript.html">Javascript</a>
+    <header>
+      <div class="hamburger-button js-hamburger-button">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="hamburger-menu js-hamburger-menu">
+        <div class="hamburger-menu__logo">
+          <span>&lt;Frontend_<br />Learner /&gt;</span>
+        </div>
+        <nav>
+          <ul class="hamburger-menu__list">
+            <li>
+              <a href="#about">about</a>
             </li>
-            <li class="top-nav__li">
-              <a href="issues.html">Issues</a>
+            <li>
+              <a href="#contact">contact</a>
+            </li>
+            <li>
+              <a href="#all-project">all-project</a>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
-    <div></div>
-    <main class="main">
-      <section class="section">
-        <h1 class="section-header">HTML & CSS</h1>
-        <div class="card-container">
-          <div class="card">
-            <figure class="card__img-container">
-              <img
-                class="card__img"
-                src="development/qr-code/preview.jpg"
-                alt=""
-              />
-            </figure>
-            <h3 class="card__header">QR-code</h3>
-            <p class="card__describtion"></p>
-            <a href="development/qr-code/index.html" class="card__link">
-              check the project >
-            </a>
+    <main>
+      <div class="hero">
+        <div class="space">
+          <!-- <div class="wall space__wall">
+            <div class="wall__face wall__left"></div>
+            <div class="wall__face wall__right"></div>
+            <div class="wall__face wall__top"></div>
+          </div> -->
+          <div class="title space__title">
+            <h1 class="--heading-2">Frontend_learner</h1>
+            <h2 class="--heading-4 --FW-regular">Building beautiful website</h2>
           </div>
-          <div class="card">
-            <figure class="card__img-container">
-              <img
-                class="card__img"
-                src="development/blog-preview-card-main/preview.jpg"
-                alt=""
-              />
-            </figure>
-            <h3 class="card__header">Blog-preview-card</h3>
-            <p class="card__describtion"></p>
-            <a
-              href="development/blog-preview-card-main/index.html"
-              class="card__link"
-            >
-              check the project >
-            </a>
-          </div>
-          <div class="card">
-            <figure class="card__img-container">
-              <img
-                class="card__img"
-                src="development/social-links-profile-main/preview.jpg"
-                alt=""
-              />
-            </figure>
-            <h3 class="card__header">Social links profile</h3>
-            <p class="card__describtion"></p>
-            <a
-              href="development/social-links-profile-main/index.html"
-              class="card__link"
-            >
-              check the project >
-            </a>
-          </div>
-          <div class="card">
-            <figure class="card__img-container">
-              <img
-                class="card__img"
-                src="development/recipe-page-main/preview.jpg"
-                alt=""
-              />
-            </figure>
-            <h3 class="card__header">Recipe page</h3>
-            <p class="card__describtion"></p>
-            <a
-              href="development/recipe-page-main/index.html"
-              class="card__link"
-            >
-              check the project >
-            </a>
-          </div>
-          <div class="card">
-            <figure class="card__img-container">
-              <img
-                class="card__img"
-                src="development/product-preview-card/design/desktop-design.jpg"
-                alt=""
-              />
-            </figure>
-            <h3 class="card__header">Product preview card</h3>
-            <p class="card__describtion"></p>
-            <a
-              href="development/product-preview-card/index.html"
-              class="card__link"
-            >
-              check the project >
-            </a>
-          </div>
-          <div class="card">
-            <figure class="card__img-container">
-              <img
-                class="card__img"
-                src="development/four-card-feature-section/design/desktop-design.jpg"
-                alt=""
-              />
-            </figure>
-            <h3 class="card__header">Four card feature section</h3>
-            <p class="card__describtion"></p>
-            <a
-              href="development/four-card-feature-section/index.html"
-              class="card__link"
-            >
-              check the project >
-            </a>
-          </div>
-          <div class="card">
-            <figure class="card__img-container">
-              <img
-                class="card__img"
-                src="development/testimonials-grid-section/design/desktop-design.jpg"
-                alt=""
-              />
-            </figure>
-            <h3 class="card__header">Testimonials-grid-section</h3>
-            <p class="card__describtion"></p>
-            <a
-              href="development/testimonials-grid-section/index.html"
-              class="card__link"
-            >
-              check the project >
-            </a>
-          </div>
-          <div class="card">
-            <figure class="card__img-container">
-              <img
-                class="card__img"
-                src="development/meet-landing-page/preview.jpg"
-                alt=""
-              />
-            </figure>
-            <h3 class="card__header">Meet-landing-page</h3>
-            <p class="card__describtion"></p>
-            <a
-              href="development/meet-landing-page/starter-code/index.html"
-              class="card__link"
-            >
-              check the project >
-            </a>
-          </div>
-          <div class="card">
-            <figure class="card__img-container">
-              <img
-                class="card__img"
-                src="development/art-gallery-website/preview.jpg"
-                alt=""
-              />
-            </figure>
-            <h3 class="card__header">Art-gallery-website</h3>
-            <p class="card__describtion"></p>
-            <a
-              href="development/art-gallery-website/starter-code/index.html"
-              class="card__link"
-            >
-              check the project >
-            </a>
-          </div>
-          <div class="card">
-            <figure class="card__img-container">
-              <img
-                class="card__img"
-                src="development/chat-app-css-illustration/design/desktop-design.jpg"
-                alt=""
-              />
-            </figure>
-            <h3 class="card__header">Chat-app-css-illustration</h3>
-            <p class="card__describtion"></p>
-            <a
-              href="development/chat-app-css-illustration/index.html"
-              class="card__link"
-            >
-              check the project >
-            </a>
-          </div>
-          <div class="card">
-            <figure class="card__img-container">
-              <img
-                class="card__img"
-                src="development/digitalbank-landing-page/preview.jpg"
-                alt=""
-              />
-            </figure>
-            <h3 class="card__header">Digitalbank-landing-page</h3>
-            <p class="card__describtion"></p>
-            <a
-              href="development/digitalbank-landing-page/index.html"
-              class="card__link"
-            >
-              check the project >
-            </a>
+
+          <div class="desk space__desk">
+            <div class="desk__face desk__front">
+              <div class="desk__front-decoration"></div>
+              <a class="desk__front-link" href="all-projects.html"
+                >all-project</a
+              >
+            </div>
+            <div class="desk__face desk__back"></div>
+            <div class="desk__face desk__left"></div>
+            <div class="desk__face desk__right"></div>
+            <div class="desk__face desk__top">
+              <div class="desk__circle"></div>
+              <div class="desk__light"></div>
+              <div class="screen desk__screen">
+                <div class="carousel-container">
+                  <div class="carousel--v swiper swiper-0">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="carousel swiper swiper-1">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <a
+                                class="link--disabled"
+                                href="development/meet-landing-page/starter-code/index.html"
+                              >
+                                <img
+                                  src="development/meet-landing-page/preview.jpg"
+                                  alt="img"
+                                />
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a
+                                class="link--disabled"
+                                href="development/art-gallery-website/starter-code/index.html"
+                              >
+                                <img
+                                  src="development/art-gallery-website/preview.jpg"
+                                  alt="img"
+                                />
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a
+                                class="link--disabled"
+                                href="development/chat-app-css-illustration/index.html"
+                              >
+                                <img
+                                  src="development/chat-app-css-illustration/preview.jpg"
+                                  alt="img"
+                                />
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a
+                                class="link--disabled"
+                                href="development/digitalbank-landing-page/index.html"
+                              >
+                                <img
+                                  src="development/digitalbank-landing-page/preview.jpg"
+                                  alt="img"
+                                />
+                              </a>
+                            </div>
+                          </div>
+
+                          <div
+                            class="swiper-pagination carousel__pagination"
+                          ></div>
+                          <div
+                            class="carousel__nav-button carousel__nav-button--prev"
+                          >
+                            <img
+                              src="images/arrow_back_ios_30dp_E3E3E3_FILL0_wght700_GRAD0_opsz24.svg"
+                              alt="arrow-backward"
+                            />
+                          </div>
+                          <div
+                            class="carousel__nav-button carousel__nav-button--next"
+                          >
+                            <img
+                              src="images/arrow_forward_ios_30dp_E3E3E3_FILL0_wght700_GRAD0_opsz24.svg"
+                              alt="arrow-forward"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="carousel swiper swiper-2">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <img
+                                src="development/art-gallery-website/preview.jpg"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="development/art-gallery-website/preview.jpg"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="development/art-gallery-website/preview.jpg"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="swiper-slide">
+                              <img
+                                src="development/art-gallery-website/preview.jpg"
+                                alt="img"
+                              />
+                            </div>
+                          </div>
+
+                          <div
+                            class="swiper-pagination carousel__pagination"
+                          ></div>
+                          <div
+                            class="carousel__nav-button carousel__nav-button--prev"
+                          >
+                            <img
+                              src="images/arrow_back_ios_30dp_E3E3E3_FILL0_wght700_GRAD0_opsz24.svg"
+                              alt="arrow-backward"
+                            />
+                          </div>
+                          <div
+                            class="carousel__nav-button carousel__nav-button--next"
+                          >
+                            <img
+                              src="images/arrow_forward_ios_30dp_E3E3E3_FILL0_wght700_GRAD0_opsz24.svg"
+                              alt="arrow-forward"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="swiper-pagination carousel--v__pagination"
+                    ></div>
+                    <div
+                      class="carousel__nav-button carousel--v__nav-button--prev"
+                    >
+                      <img
+                        src="images/arrow_back_ios_30dp_E3E3E3_FILL0_wght700_GRAD0_opsz24.svg"
+                        alt="arrow-backward"
+                      />
+                    </div>
+                    <div
+                      class="carousel__nav-button carousel--v__nav-button--next"
+                    >
+                      <img
+                        src="images/arrow_forward_ios_30dp_E3E3E3_FILL0_wght700_GRAD0_opsz24.svg"
+                        alt="arrow-forward"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="screen__channel">text</div>
+              </div>
+            </div>
+            <div class="desk__face desk__bottom"></div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
+    <footer></footer>
+
+    <!-- Linking SwiperJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- custom script -->
+    <script src="scripts/swiper.js"></script>
+    <script src="scripts/header.js"></script>
+    <script type="module" src="scripts/carousel.js"></script>
   </body>
 </html>
