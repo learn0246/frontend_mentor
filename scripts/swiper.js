@@ -1,5 +1,3 @@
-const label = ["html", "javascript"];
-
 new Swiper(".swiper-0", {
   speed: 400,
   direction: "vertical",
@@ -24,7 +22,7 @@ new Swiper(".swiper-0", {
     renderCustom: function (swiper, current, total) {
       let language;
       if (current === 1) {
-        language = "HTLMS & CSS";
+        language = "HTLM & CSS";
       }
       if (current === 2) {
         language = "Javascript";
@@ -32,11 +30,6 @@ new Swiper(".swiper-0", {
 
       return language;
     },
-  },
-
-  navigation: {
-    nextEl: ".carousel--v__nav-button--prev",
-    prevEl: ".carousel--v__nav-button--next",
   },
 
   keyboard: {
