@@ -32,6 +32,10 @@ const closeWindowIcon = document.querySelector(".hero__xmark");
 
 function carouselZoomIn() {
   carouselContainer.addEventListener("click", () => {
+    if (window.innerWidth < 1000) {
+      return;
+    }
+
     closeWindowIcon.style.display = "inline";
 
     carouselContainer.classList.add("carousel-container--full-screen");
