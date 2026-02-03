@@ -124,14 +124,6 @@ a {
   font-weight: var(--FW-regular);
 }
 
-.link--disabled {
-  pointer-events: none;
-}
-
-.link--enabled {
-  pointer-events: auto;
-}
-
 /* || Generals */
 body {
   font-family: var(--FF);
