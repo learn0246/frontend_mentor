@@ -253,22 +253,6 @@ header {
   align-items: center;
 }
 
-.hero__xmark {
-  display: none;
-  padding: 1.5rem;
-  color: var(--bg-main);
-  position: absolute;
-  top: anchor(--carousel-container top);
-  right: anchor(--carousel-container right);
-  z-index: 10;
-  cursor: pointer;
-}
-
-.hero__xmark:active {
-  scale: 0.8;
-  transition: scale 0.1s ease-in-out;
-}
-
 .hero__carousel-info {
   font-size: var(--step-2);
   font-weight: var(--FW-semi-bold);
