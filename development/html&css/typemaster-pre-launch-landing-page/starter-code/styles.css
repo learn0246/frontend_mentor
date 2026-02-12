@@ -282,6 +282,7 @@ p {
 .addition-content__picture {
   border-radius: var(--radius-16);
   overflow: hidden;
+  background-color: var(--orange-500);
 }
 
 .addition-content__picture:nth-of-type(1) {
