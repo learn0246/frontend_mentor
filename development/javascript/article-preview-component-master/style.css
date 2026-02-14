@@ -1,0 +1,233 @@
+@layer base {
+  /* || Reset */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
+    *,
+    ::after,
+    ::before {
+      animation-duration: 0s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0s !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* || Variables */
+  :root {
+    /* colors */
+    --white: #fff;
+    --gray-200: hsl(210, 46%, 95%);
+    --gray-400: hsl(212, 23%, 69%);
+    --gray-500: hsl(213, 17%, 51%);
+    --gray-900: hsl(217, 19%, 35%);
+
+    /* fonts */
+    --ff-main: "Manrope", sans-serif;
+    --fw-black: 900;
+    --fw-extra-bold: 800;
+    --fw-bold: 700;
+    --fw-semi-bold: 600;
+    --fw-medium: 500;
+
+    --fs-12: 0.75rem;
+    --fs-14: 0.875rem;
+    --fs-16: 1rem;
+    --fs-18: 1.125rem;
+    --fs-20: 1.25rem;
+    --fs-24: 1.5rem;
+    --fs-32: 2rem;
+    --fs-40: 2.5rem;
+    --fs-48: 3rem;
+    --fs-60: 3.75rem;
+    --fs-72: 4.5rem;
+    --fs-84: 5.25rem;
+    --fs-96: 6rem;
+
+    --p: var(--fw-medium) var(--fs-14) / 1.4em var(--ff-main);
+    --h1: var(--fw-bold) var(--fs-20) / 1.3em var(--ff-main);
+    --h2: var(--fw-bold) var(--fs-18) / 1.3em var(--ff-main);
+
+    /* spacing */
+    --spacing-4: 0.25rem;
+    --spacing-8: 0.5rem;
+    --spacing-10: 0.625rem;
+    --spacing-12: 0.75rem;
+    --spacing-16: 1rem;
+    --spacing-20: 1.25rem;
+    --spacing-24: 1.5rem;
+    --spacing-32: 2rem;
+    --spacing-40: 2.5rem;
+    --spacing-48: 3rem;
+    --spacing-56: 3.5rem;
+    --spacing-60: 3.75rem;
+    --spacing-64: 4rem;
+    --spacing-72: 4.5rem;
+    --spacing-80: 5rem;
+    --spacing-84: 5.25rem;
+    --spacing-96: 6rem;
+
+    /* radius */
+    --radius-4: 0.25rem;
+    --radius-8: 0.5rem;
+    --radius-12: 0.75rem;
+    --radius-16: 1rem;
+    --radius-24: 1.5rem;
+    --radius-32: 2rem;
+    --radius-40: 2.5rem;
+    --radius-48: 3rem;
+    --radius-full: 999rem;
+  }
+
+  /* || General */
+
+  body {
+    font-family: var(--ff-main);
+    color: var(--gray-500);
+    background-color: var(--gray-200);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: var(--fw-bold);
+    color: var(--gray-900);
+  }
+
+  h1 {
+    font-size: var(--fs-20);
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: var(--fs-32);
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: var(--fs-24);
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: var(--fs-16);
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+
+  /* || Utilities */
+  .wrapper {
+    width: clamp(24rem, 95vw, 32rem);
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  .region {
+    padding-top: var(--region-space, var(--spacing-24));
+    padding-bottom: var(--region-space, var(--spacing-24));
+  }
+
+  .flow > * + * {
+    margin-top: 2rem;
+  }
+
+  .fw-bold {
+    font-weight: var(--fw-medium);
+  }
+  .fw-semi-bold {
+    font-weight: var(--fw-semi-bold);
+  }
+  .fw-bold {
+    font-weight: var(--fw-bold);
+  }
+  .fw-extra-bold {
+    font-weight: var(--fw-extra-bold);
+  }
+  .fw-black {
+    font-weight: var(--fw-black);
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .vertical-center {
+    align-content: center;
+  }
+}
+
+#card {
+  anchor-name: --card;
+}
+
+#share-btn {
+  anchor-name: --share-btn;
+}
+#share-btn-popover:popover-open {
+  display: flex;
+  position-anchor: --card;
+  position: absolute;
+  /* position-area: bottom center;
+  margin-top: 1rem; */
+
+  position-area: bottom center;
+  transform: translateY(-76px);
+  overflow: visible;
+}
+
+#share-btn-popover:popover-open::after {
+  display: none;
+  content: "";
+  width: 24px;
+  height: 12px;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  transform: translateY(-12px) rotateZ(180deg);
+  background-color: var(--gray-900);
+  position: absolute;
+  top: 0%;
+  left: calc(50% - 12px);
+}
+
+@media screen and (min-width: 768px) {
+  #share-btn-popover:popover-open {
+    position-area: center bottom;
+    margin-top: 1rem;
+    transform: translateX(16.2rem) translateY(-1rem);
+  }
+
+  #share-btn-popover:popover-open::after {
+    display: block;
+  }
+}
